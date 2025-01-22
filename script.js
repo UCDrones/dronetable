@@ -284,8 +284,14 @@ function loadDroneData(data) {
     
 
     let specs = Object.entries(row)
-      .slice(2, -1) // Skip the first and last entries
+      .filter(([key]) => key !== "848") // Exclude the '848' key
       .filter(([key]) => key !== "Price") // Exclude the 'Price' key
+      .filter(([key]) => key !== "Blue") // Exclude the 'Blue' key
+      .filter(([key]) => key !== "Image") // Exclude the 'Image' key
+      .filter(([key]) => key !== "Link") // Exclude the 'Link' key
+      .filter(([key]) => key !== "Model") // Exclude the 'Model' key
+      .filter(([key]) => key !== "Make") // Exclude the 'Make' key
+      .filter(([key]) => key !== "Made In") // Exclude the 'Made In' key
       .map(
         ([key, value]) => `<p><strong>${key}:</strong> ${value || "N/A"}</p>`
       )

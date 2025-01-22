@@ -306,7 +306,7 @@ function loadDroneData(data) {
             </div>
             <div class="image-container">
                 <img src="${row.Image}" 
-                     onerror="this.src='/images/placeholder.jpg';" 
+                     onerror="this.src='/dronetable/images/placeholder.jpg';" 
                      alt="${row.Make} ${row.Model}" />
             </div>
             <div class="card-body">
